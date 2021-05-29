@@ -1,0 +1,136 @@
+<div class="container p-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/expedientes/edit/{{expediente.expedienteId}}" method="POST">
+
+                        <div class="form-group row mt-5">
+                            <label class="col-form-label ml-4" for="nombreCompleto">Nombre:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="30" name="nombreCompleto" value="{{expediente.nombreCompleto}}" class="form-control" autofocus>
+                            </div>
+
+                            <label class="col-form-label ml-4" for="genero">Género:</label>
+                            <div class="form-group ml-3">
+                                <select type="text" name="genero" value="{{option.value}}" class="form-control">
+                                    <option value="Femenino">Femenino</option>
+                                    <option value="Masculino">Masculino</option>
+                                </select>
+                            </div> 
+
+                            <label class="col-form-label ml-4" style="visibility: hidden;" for="expedienteId">Expediente ID:</label>
+                            <div class="form-group ml-3 " style="visibility: hidden;">
+                                <input type="text" size="4" name="expedienteId" value="{{expediente.expedienteId}}" class="form-control">
+                            </div>   
+                        </div>
+
+                        <div class="form-group row">
+                             <label class="col-form-label ml-4" for="ocupacion">Ocupación:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="20" name="ocupacion" value="{{expediente.ocupacion}}" class="form-control">
+                            </div> 
+
+                            <label class="col-form-label ml-4" for="estadoCivil">Estado Civil:</label>
+                            <div class="form-group ml-3">
+                                <select type="text" name="estadoCivil" value="{{expediente.estadoCivil}}" class="form-control" autofocus>
+                                    <option>Soltero</option>
+                                    <option>Casado</option>
+                                    <option>Divorciado</option>
+                                    <option>Concubinato</option>
+                                    <option>Viudo</option>
+                                </select>
+                            </div>
+
+                            <label class="col-form-label ml-4" for="calle">Calle:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="22" name="calle" value="{{expediente.calle}}" class="form-control" autofocus>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label ml-4" for="numExt">Exterior:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="3" name="numExt" value="{{expediente.numExt}}" class="form-control" autofocus>
+                            </div>
+
+                            <label class="col-form-label ml-4" for="numInt">Interior:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="4" name="numInt" value="{{expediente.numInt}}" class="form-control" autofocus>
+                            </div>
+                            
+                            <label class="col-form-label ml-4" for="cp">CP:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="4" name="cp" value="{{expediente.cp}}" class="form-control">
+                            </div> 
+
+                            <label class="col-form-label ml-4" for="colonia">Colonia:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="35" name="colonia" value="{{expediente.colonia}}" class="form-control">
+                            </div>  
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label ml-4" for="correo">Correo:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="31" name="correo" value="{{expediente.correo}}" class="form-control">
+                            </div> 
+                            <label class="col-form-label ml-4" for="telefono">Teléfono:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="14" name="telefono" value="{{expediente.telefono}}" class="form-control" autofocus>
+                            </div>
+                            <label class="col-form-label ml-4" for="celular">Celular:</label>
+                            <div class="form-group ml-3">
+                                <input type="text" size="14" name="celular" value="{{expediente.celular}}" class="form-control">
+                            </div> 
+
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label ml-4" for="antHeredados">Antecedentes Heredados:</label>
+                            <div class="form-group ml-3">
+                                <textarea type="text" cols="105" rows="6" name="antHeredados" class="form-control">{{expediente.antHeredados}}</textarea>
+                            </div> 
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label ml-4" for="antPat">Antecedentes Patológicos:</label>
+                            <div class="form-group ml-3">
+                                <textarea type="text" cols="105" rows="6" name="antPat" class="form-control">{{expediente.antPat}}</textarea>
+                            </div> 
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label ml-4" for="antNoPat">Antecedentes No Patológicos:</label>
+                            <div class="form-group ml-3">
+                                <textarea type="text" cols="105" rows="6" name="antNoPat" class="form-control">{{expediente.antNoPat}}</textarea>
+                            </div> 
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label ml-4" for="antPeri">Antecedentes Perinatales:</label>
+                            <div class="form-group ml-3">
+                                <textarea type="text" cols="105" rows="6" name="antPeri" class="form-control">{{expediente.antPeri}}</textarea>
+                            </div> 
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-form-label ml-4" for="antGineco">Antecedentes Ginecoobstétricos:</label>
+                            <div class="form-group ml-3">
+                                <textarea type="text" cols="105" rows="6" name="antGineco" class="form-control">{{expediente.antGineco}}</textarea>
+                            </div>  
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-outline-info btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

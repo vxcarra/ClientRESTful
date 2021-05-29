@@ -1,0 +1,148 @@
+<div class="container p-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <div class="col md-12">
+                        <div class="toppane m-2">
+                            <h1>BUSCADOR DE EXPEDIENTES</h1>
+                            <h3>Rellene los datos de alguno de los filtros o use los botones rápidos.</h3>
+                        </div>
+                        
+                        <div class="leftpane">
+                            <div class="row m-2">
+                                <a class="btn btn-sm btn-success mr-1" href="/expedientes">
+                                    Ver todos los expedientes 
+                                </a>
+                            </div>
+                            <div class="row m-2 mt-3">
+                                <a class="btn btn-sm btn-success mr-1" href="/expedientes/busqueda/expedientes-hoy">
+                                    Ver expedientes de hoy
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="middlepane">
+                            <div class="row mb-3">
+                                <label class="mr-2" for="fechaNacimiento">Nacimiento:</label>
+                                <input type="date" style="width:175px" id="fechaNacimiento" name="fechaNacimiento" class="form-control">
+                                <a class="ml-3" onclick="this.href='/expedientes/nacimiento/'+document.getElementById('fechaNacimiento').value" href="" data-abc="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="mr-2" for="fechaAlta">Alta:</label>
+                                <input type="date" style="width:175px" id="fechaAlta" name="fechaAlta" class="form-control">
+                                <a class="ml-3" onclick="this.href='/expedientes/alta/'+document.getElementById('fechaAlta').value" href="" data-abc="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="rightpane">
+                            <div class="row mb-3">
+                                <label class="mr-2" for="expedienteId">Expediente Id:</label>
+                                <input type="text" style="width:65px" id="expedienteId" name="expedienteId" class="form-control">
+                                <a class="ml-3" id="expedienteb" 
+                                onclick="this.href='/expedientes/'+document.getElementById('expedienteId').value" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="mr-2" for="genero">Género:</label>
+                                <select type="text" style="width:130px" id="genero" name="genero" class="form-control">
+                                    <option>Femenino</option>
+                                    <option>Masculino</option>
+                                </select>
+                                <a class="ml-3" onclick="this.href='/expedientes/genero/'+document.getElementById('genero').value" href="" data-abc="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="col md-12">
+                        <div class="toppane m-2">
+                            <h1>BUSCADOR DE NOTAS</h1>
+                            <h3>Rellene los datos de alguno de los filtros o use los botones rápidos.</h3>
+                        </div>
+                        
+                        <div class="leftpane">
+                            <div class="row m-2">
+                                <a class="btn btn-sm btn-success mr-1" href="/expedientes/notas/all" data-abc="true">
+                                    Ver todas las notas 
+                                </a>
+                            </div>
+                            <div class="row m-2 mt-3">
+                                <a class="btn btn-sm btn-success mr-1" href="/expedientes/busqueda/notas-hoy" data-abc="true">
+                                    Ver notas de hoy
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="middlepane">
+                           <div class="row mb-3">
+                                <label class="mr-2" for="nombreCompleto">Nombre:</label>
+                                <input type="text" style="width:240px" id="nombreCompleto" name="nombreCompleto" class="form-control">
+                                <a class="ml-3" onclick="this.href='/expedientes/nombre/'+document.getElementById('nombreCompleto').value" href="" data-abc="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="mr-2" for="nota-exp">Expediente Id:</label>
+                                <input type="text" style="width:175px" id="notaExp" name="notaExp" class="form-control">
+                                <a class="ml-3" onclick="this.href='/expedientes/notaExp/'+document.getElementById('notaExp').value" href="" data-abc="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </a>
+                            </div>                  
+                        </div>
+                    </div>
+
+                     <div class="leftpane">
+                           <div class="row mb-3">
+                                <label class="mr-2" for="expedienteId">Nota Id:</label>
+                                <input type="text" style="width:168px" id="idNota" name="idNota" class="form-control">
+                                <a class="ml-3" onclick="this.href='/expedientes/idNota/'+document.getElementById('idNota').value" href="" data-abc="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="mr-2" for="fechaAlta">Visita:</label>
+                                <input type="date" style="width:175px" id="fechaVisita" name="fechaVisita" class="form-control">
+                                <a class="ml-3" onclick="this.href='/expedientes/visita/'+document.getElementById('fechaVisita').value" href="" data-abc="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </a>
+                            </div>                  
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
